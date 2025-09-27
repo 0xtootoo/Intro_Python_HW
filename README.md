@@ -1,10 +1,4 @@
-# NewCoach
-
 # NewCoach  
-![GitHub last commit](https://img.shields.io/github/last-commit/0xtootoo/newcoach)  
-![GitHub repo size](https://img.shields.io/github/repo-size/0xtootoo/newcoach)  
-
------
 
 ## Table of Contents
 
