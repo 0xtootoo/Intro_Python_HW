@@ -61,6 +61,7 @@ Here is a minimal workflow:
 import pandas as pd
 from newcoach import DataPreprocessor, Modeler, Plotter
 from newcoach import load_example
+import matplotlib.pyplot as plt
 
 # Example dataset (dataset with proper structure can also be used here)
 df = load_example("New_Coach_Effect.csv")
@@ -81,12 +82,15 @@ ols_res = mod.fit_ols("points ~ relative_time + post + time_post + Venue_home + 
 
 resid_res = ols_res.resid.reset_index(drop=True)
 Plotter.plot_residual_hist_and_qq(resid_res, title_prefix="xGD OLS residuals");
-
+plt.tight_layout()
+plt.show()
 print(ols_res.summary())
 
 # Visualization of average values
 Plotter.plot_pre_post_mean(df_clean, value_col="xGD",
                            title="Average xGD Around Coach Change")
+plt.tight_layout()
+plt.show()
 ```
 ## Tutorial
 Here provide a Jupyter Notebook tutorial that explains each function step-by-step:
