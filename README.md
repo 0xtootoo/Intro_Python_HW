@@ -91,7 +91,7 @@ Plotter.plot_pre_post_mean(df_clean, value_col="xGD",
 ## Tutorial
 Here provide a Jupyter Notebook tutorial that explains each function step-by-step:
 
-[Tutorial Notebook] (tutorial.ipynb)
+[Tutorial Notebook](tutorial.ipynb)
 
 ## License
 
