@@ -45,13 +45,15 @@ Your dataset must be a CSV (or DataFrame) with the following columns:
 Note: Without these columns, some preprocessing or modeling functions will not run.
 
 ## Installation
-
+In terminal, type:
 ```console
-pip install newcoach
-git clone https://github.com/0xtootoo/newcoach.git
-cd newcoach
-pip install -e .
-
+git clone https://github.com/0xtootoo/Intro_Python_HW.git
+cd Intro_Python_HW
+pip install -e . (or python -m pip install -e .)
+```
+In .py/notebook import:
+```console
+from newcoach import DataPreprocessor, Modeler, Plotter
 ```
 ## Usage
 Here is a minimal workflow:
