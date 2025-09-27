@@ -47,7 +47,7 @@ class DataPreprocessor:
                  venue_col: str = "Venue",
                  change_flag_col: str = "within_season_change",
                  result_col: str = "Result",
-                 SoT_percent_Standard: str = "SoT_percent_Standard",
+                 SoT_col: str = "SoT_percent_Standard",
                  xgf_col: str = "xGF",
                  xga_col: str = "xGA",
                  elo_col: str = "elo_pre",
@@ -58,7 +58,7 @@ class DataPreprocessor:
         self.venue_col = venue_col
         self.change_flag_col = change_flag_col
         self.result_col = result_col
-        self.SoT_percent_Standard = SoT_percent_Standard
+        self.SoT_col = SoT_col
         self.xgf_col = xgf_col
         self.xga_col = xga_col
         self.elo_col = elo_col
