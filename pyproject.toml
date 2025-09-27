@@ -33,14 +33,14 @@ Source = "https://github.com/0xtootoo/newcoach"
 
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/newcoach"]
+packages = ["newcoach"]
 include = [
-  "src/newcoach/Dataset/*.csv",
+  "newcoach/Dataset/*.csv",
 ]
 
 [tool.hatch.build.targets.sdist]
 include = [
-  "src/newcoach/**",
+  "newcoach/**",
   "README.md",
   "LICENSE.txt",
 ]
