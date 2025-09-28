@@ -78,7 +78,7 @@ df_clean = dp.data.loc[~out.flags.any(axis=1)].copy()
 
 # Modeling and check residual distribution and QQ plot
 mod = Modeler(df_clean)
-ols_res = mod.fit_ols("points ~ relative_time + post + time_post + Venue_home + Diff_Elo + xGD")
+ols_res = mod.fit_ols("xGD ~ relative_time + post + time_post + Venue_home + Diff_Elo + C(Team)-1")
 
 resid_res = ols_res.resid.reset_index(drop=True)
 Plotter.plot_residual_hist_and_qq(resid_res, title_prefix="xGD OLS residuals");
