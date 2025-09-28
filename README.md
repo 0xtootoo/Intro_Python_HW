@@ -62,7 +62,6 @@ from newcoach import DataPreprocessor, Modeler, Plotter
 ## Usage
 Here is a minimal workflow:
 ```console
-import pandas as pd
 from newcoach import DataPreprocessor, Modeler, Plotter
 from newcoach import load_example
 import matplotlib.pyplot as plt
