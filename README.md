@@ -48,7 +48,11 @@ Note: Without these columns, some preprocessing or modeling functions will not r
 In terminal, type:
 ```console
 git clone https://github.com/0xtootoo/Intro_Python_HW.git
+```
+```console
 cd Intro_Python_HW
+```
+```console
 pip install -e . (or python -m pip install -e .)
 ```
 In .py/notebook import:
