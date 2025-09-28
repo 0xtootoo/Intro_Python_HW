@@ -8,7 +8,7 @@ import statsmodels.formula.api as smf
 
 
 def _to_datetime(df: pd.DataFrame, date_col: str = "Date") -> pd.DataFrame:
-    """make sure the data has the form as datetime64[ns]."""
+    """make sure the data has correct date form."""
     if not np.issubdtype(df[date_col].dtype, np.datetime64):
         df = df.copy()
         df[date_col] = pd.to_datetime(df[date_col])
@@ -16,7 +16,7 @@ def _to_datetime(df: pd.DataFrame, date_col: str = "Date") -> pd.DataFrame:
 
 
 def _numeric_cols(df: pd.DataFrame, include: Optional[Iterable[str]] = None) -> List[str]:
-    """Returns a numeric column (or a numeric column in a user-specified subset).w"""
+    """Returns a numeric column (or a numeric column in a user-specified subset)."""
     if include is None:
         mask = df.select_dtypes(include=[np.number]).columns.tolist()
         return mask
@@ -123,7 +123,7 @@ class DataPreprocessor:
             sub = df[df[self.team_col] == team]  # all matches for this team
             pos = sub.index.get_loc(idx)         # position of the change match within the team
 
-            # truncate window:前 WINDOW + 后 WINDOW
+            # truncate window:pre-WINDOW + post-WINDOW
             win = sub.iloc[max(0, pos - window):pos + window + 1].copy()
 
             # relative_time: change point match = 0
